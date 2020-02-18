@@ -1,11 +1,47 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ExcelDataReader/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ExcelDataReader/3.6.0": {
+      "sha512": "eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
+      "type": "package",
+      "path": "exceldatareader/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.3.6.0.nupkg.sha512",
+        "exceldatareader.nuspec",
+        "lib/net20/ExcelDataReader.dll",
+        "lib/net20/ExcelDataReader.pdb",
+        "lib/net20/ExcelDataReader.xml",
+        "lib/net45/ExcelDataReader.dll",
+        "lib/net45/ExcelDataReader.pdb",
+        "lib/net45/ExcelDataReader.xml",
+        "lib/netstandard1.3/ExcelDataReader.dll",
+        "lib/netstandard1.3/ExcelDataReader.pdb",
+        "lib/netstandard1.3/ExcelDataReader.xml",
+        "lib/netstandard2.0/ExcelDataReader.dll",
+        "lib/netstandard2.0/ExcelDataReader.pdb",
+        "lib/netstandard2.0/ExcelDataReader.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ExcelDataReader >= 3.6.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\arindam_d\\.nuget\\packages\\": {},
@@ -14,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj",
+      "projectUniqueName": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj",
       "projectName": "FileReader",
-      "projectPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj",
+      "projectPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj",
       "packagesPath": "C:\\Users\\arindam_d\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\obj\\",
+      "outputPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -48,6 +84,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "ExcelDataReader": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

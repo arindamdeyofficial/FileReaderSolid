@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj": {}
+    "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj": {
+    "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj",
+        "projectUniqueName": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj",
         "projectName": "FileReader",
-        "projectPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\FileReader.csproj",
+        "projectPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\FileReader.csproj",
         "packagesPath": "C:\\Users\\arindam_d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReader\\FileReader\\obj\\",
+        "outputPath": "C:\\Users\\arindam_d\\OneDrive - Dell Technologies\\Work\\FileReaderSolid\\FileReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
