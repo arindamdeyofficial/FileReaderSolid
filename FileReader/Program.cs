@@ -14,6 +14,9 @@ namespace FileReader
         {
             Product prd = new Product();
             prd.LogProductBase();
-        }
+            List<IncomingProduct> orgnPrds = ReadExcelOriginal.ReadExcel();
+            var allPrdsSent = orgnPrds.Select(i => prd.ConvertConcreteProduct(i));
+            Console.WriteLine("{0} Products found", allPrdsSent.Count());
+        }       
     }
 }

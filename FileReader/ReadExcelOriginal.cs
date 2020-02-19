@@ -8,9 +8,9 @@ using System.Linq;
 
 namespace FileReader
 {
-    public class ReadExcelOriginal
+    public static class ReadExcelOriginal
     {
-        public ReadExcelOriginal()
+        public static List<IncomingProduct> ReadExcel()
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             var sw = new Stopwatch();
@@ -35,6 +35,7 @@ namespace FileReader
             }
             Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds.ToString() + " ms (" + sw.ElapsedMilliseconds.ToString() + " ms to open)"
                 + Environment.NewLine + "Total products found: " + prds.Count());
+            return prds;
         }
         public static List<T> ConvertDataTableToGenericList<T>(DataTable dt)
         {
