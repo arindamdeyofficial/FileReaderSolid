@@ -24,7 +24,7 @@ namespace FileReader
             //O,L - Product extensible for change notify.Upon Notification conversion from flat structure to concerete structure
             //D - Unittest, ISourceType
 
-            //ISourceType - sourcetype, Parser()
+            //ISourceType - Parser()
 
             //Sql:ISourceType
             //Mongo: ISourceType
@@ -35,6 +35,7 @@ namespace FileReader
             //IInComingProducts
             //InComingProducts DI ISourceType : IInComingProducts - src.Parse();- flat properties DataFirst
             //Product class - Model - SOLID - abstract Base - NotifyChange()
+
 
             IServiceCollection services = new ServiceCollection();
             services.AddSingleton<ISourceType, ExcelParser>();
