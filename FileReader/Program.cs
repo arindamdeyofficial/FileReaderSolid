@@ -12,48 +12,8 @@ namespace FileReader
     {
         static void Main(string[] args)
         {
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-            var sw = new Stopwatch();
-            sw.Start();
-            using (var stream = File.Open(@"C:\Users\arindam_d\OneDrive - Dell Technologies\Work\FileReaderSolid\product.xlsx", FileMode.Open, FileAccess.Read))
-            {
-                using (var reader = ExcelReaderFactory.CreateReader(stream))
-                {
-                    List<string> columns = new List<string>();
-                    List<Product> prds = new List<Product>();
-
-                    DataSet ds = reader.AsDataSet(new ExcelDataSetConfiguration()
-                    {
-                        UseColumnDataType = false,
-                        ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
-                        {
-                            UseHeaderRow = true
-                        }
-                    });
-                    prds = ConvertDataTableToGenericList<Product>(ds.Tables[0]);
-                }
-            }
-            Console.WriteLine("Elapsed: " + sw.ElapsedMilliseconds.ToString() + " ms (" + sw.ElapsedMilliseconds.ToString() + " ms to open)");
-        }
-        public static List<T> ConvertDataTableToGenericList<T>(DataTable dt)
-        {
-            var columnNames = dt.Columns.Cast<DataColumn>()
-                   .Select(c => c.ColumnName)
-                   .ToList();
-
-            var properties = typeof(T).GetProperties();
-            DataRow[] rows = dt.Select();
-            return rows.Select(row =>
-            {
-                var objT = Activator.CreateInstance<T>();
-                foreach (var pro in properties)
-                {                    
-                    if (columnNames.Contains(pro.Name))
-                        pro.SetValue(objT, Convert.ChangeType(row[pro.Name], pro.PropertyType));
-                }
-
-                return objT;
-            }).ToList();
+            Product prd = new Product();
+            prd.LogProductBase();
         }
     }
 }

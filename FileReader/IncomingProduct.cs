@@ -5,8 +5,11 @@ using System.IO;
 
 namespace FileReader
 {
-    public class Product: ProductBase
+    public class IncomingProduct
     {
+        public string Type { get; set; }
+        public string SKU { get; set; }
+        public string Name { get; set; }
         public string Published { get; set; }
         public string Isfeatured { get; set; }
         public string Visibilityincatalog { get; set; }
@@ -51,13 +54,5 @@ namespace FileReader
     public string Attribute2global { get; set; }
     public string Attribute1default { get; set; }
     public string Attribute2default { get; set; }
-        //public override void LogProductBase()
-        //{
-        //    Console.WriteLine("Productbase {0} logged through Product", Name);
-        //}
-        public override void NotifyProductChange()
-        {
-            Console.WriteLine("Productbase {0} change notified through Product", Name);
-        }
-    }
+}
 }
