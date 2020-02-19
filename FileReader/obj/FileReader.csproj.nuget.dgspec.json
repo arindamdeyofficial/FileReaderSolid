@@ -45,6 +45,10 @@
             "ExcelDataReader": {
               "target": "Package",
               "version": "[3.6.0, )"
+            },
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [
