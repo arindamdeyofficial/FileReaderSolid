@@ -1,4 +1,5 @@
 ﻿using ExcelDataReader;
+using FileReader.Products;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,13 +11,13 @@ namespace FileReader
 {
     public static class ReadExcelOriginal
     {
-        public static List<IncomingProduct> ReadExcel()
+        public static List<IncomingProduct> ReadExcel(string fileName)
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             var sw = new Stopwatch();
             sw.Start();
             List<IncomingProduct> prds = new List<IncomingProduct>();
-            using (var stream = File.Open(@"C:\Users\arindam_d\OneDrive - Dell Technologies\Work\FileReaderSolid\product.xlsx", FileMode.Open, FileAccess.Read))
+            using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateReader(stream))
                 {

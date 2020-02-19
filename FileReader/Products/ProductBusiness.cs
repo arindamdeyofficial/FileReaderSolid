@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FileReader
+namespace FileReader.Products
 {
     //S of Solid
     //Seperation of concern for all product operation ProductBusiness will be handeled by this class

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FileReader
+namespace FileReader.Products
 {
     public class IncomingProduct
     {
@@ -39,20 +39,20 @@ namespace FileReader
         public string Parent { get; set; }
         public string Groupedproducts { get; set; }
         public string Upsells { get; set; }
-        public string Cross_sells {get;set;}
-    public string ExternalURL { get; set; }
-    public string Buttontext { get; set; }
-    public string Download1name { get; set; }
-    public string Download1URL { get; set; }
-    public string Attribute1name { get; set; }
-    public List<string> Attribute1values { get; set; }
-    public string Attribute1visible { get; set; }
-    public string Attribute1global { get; set; }
-    public string Attribute2name { get; set; }
-    public List<string> Attribute2values { get; set; }
-    public string Attribute2visible { get; set; }
-    public string Attribute2global { get; set; }
-    public string Attribute1default { get; set; }
-    public string Attribute2default { get; set; }
-}
+        public string Cross_sells { get; set; }
+        public string ExternalURL { get; set; }
+        public string Buttontext { get; set; }
+        public string Download1name { get; set; }
+        public string Download1URL { get; set; }
+        public string Attribute1name { get; set; }
+        public List<string> Attribute1values { get; set; }
+        public string Attribute1visible { get; set; }
+        public string Attribute1global { get; set; }
+        public string Attribute2name { get; set; }
+        public List<string> Attribute2values { get; set; }
+        public string Attribute2visible { get; set; }
+        public string Attribute2global { get; set; }
+        public string Attribute1default { get; set; }
+        public string Attribute2default { get; set; }
+    }
 }
